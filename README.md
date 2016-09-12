@@ -1,0 +1,3 @@
+# A-Frame dynamic entities
+
+Simple test case to see if I can set an entity position dynamically...
