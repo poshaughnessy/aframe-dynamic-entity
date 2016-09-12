@@ -1,7 +1,7 @@
 var entity = document.getElementById('test-entity');
 
 // Try setting the position...
-entity.setAttribute('position', {x: 1, y: 2, z: 3});
+entity.setAttribute('position', {x: 1, y: 2, z: -3});
 
 // ... But inspecting the DOM, it doesn't appear to be set.
 
@@ -12,3 +12,11 @@ entity.setAttribute('position', {x: 1, y: 2, z: 3});
 
 // Ah... But even though it doesn't show in the DOM, it is apparently set OK:
 console.log('position', entity.object3D.position);
+
+// OK cool, let's try adding an image inside it then
+var image = document.createElement('a-image');
+image.setAttribute('src', 'test.jpg');
+image.setAttribute('width', 1);
+image.setAttribute('height', 1);
+
+entity.appendChild(image);
